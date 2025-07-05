@@ -46,44 +46,47 @@ const animations = [
 
 const Home = () => {
   return (
-    <main className="container">
-      <div className="flex flex-col">
-        <h1 className="text-3xl font-bold text-zinc-50">GSAP Animations</h1>
-        <ol className="flex flex-col mt-10">
-          {animations.map((animation, index) => (
-            <li
-              key={index}
-              className="flex flex-row gap-2 p-5 hover:bg-zinc-800/50 rounded-lg"
-            >
-              <p>
-                <span className="text-sm font-bold text-zinc-50">
+    <main className="min-h-screen bg-gradient-to-br from-purple-900 via-slate-800 to-purple-900 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-12 text-center bg-clip-text bg-gradient-to-r from-purple-400 to-white animate-pulse">
+          GSAP Animations Showcase
+        </h1>
+        <div className="bg-slate-800 backdrop-blur-md rounded-xl shadow-2xl p-6">
+          <ol className="space-y-4">
+            {animations.map((animation, index) => (
+              <li
+                key={index}
+                className="group flex items-center gap-4 p-4 rounded-lg bg-slate-900/80 hover:bg-purple-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+              >
+                <span className="text-lg font-bold text-purple-400 w-8">
                   {index + 1}.
                 </span>
-              </p>
-              <div className="flex flex-col gap-2 flex-1">
-                <Link
-                  to={animation.path}
-                  className="text-md font-semibold text-blue-600"
+                <div className="flex-1">
+                  <Link
+                    to={animation.path}
+                    className="text-xl font-semibold text-white group-hover:text-purple-300 transition-colors duration-200"
+                  >
+                    {animation.title}
+                  </Link>
+                  <p className="text-sm text-slate-300 mt-1">
+                    {animation.description}
+                  </p>
+                </div>
+                <svg
+                  className="size-6 text-purple-400 group-hover:text-white transform group-hover:scale-110 transition-transform duration-200"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
                 >
-                  {animation.title}
-                </Link>
-                <p className="text-gray-400 text-xs">{animation.description}</p>
-              </div>
-
-              <svg
-                className="size-6 text-gray-600 -rotate-90"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M10 13.586l2.293-2.293a1 1 0 0 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L10 13.586z"
-                />
-              </svg>
-            </li>
-          ))}
-        </ol>
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M10 13.586l2.293-2.293a1 1 0 0 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L10 13.586z"
+                  />
+                </svg>
+              </li>
+            ))}
+          </ol>
+        </div>
       </div>
     </main>
   );

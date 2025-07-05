@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
 import {
   GsapFrom,
   GsapFromTo,
@@ -13,7 +12,7 @@ import {
 
 const App = () => {
   return (
-    <div className="bg-black min-h-screen w-full">
+    <div className="bg-gradient-to-br from-purple-900 via-slate-800 to-purple-900 min-h-screen w-full">
       <Router>
         <Routes>
           <Route path="/gsapto" element={<GsapTo />} />
