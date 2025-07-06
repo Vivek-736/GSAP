@@ -52,16 +52,4 @@ Check out the live demo to see all these features in action!
 
 ---
 
-## 🤝 Contributing
-
-Pull requests are welcome! For major changes, please open an issue first.
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
-
 Happy Animating! 🎉
